@@ -57,9 +57,13 @@ Alternatively, you can run the command
 1) If you prefer a different key map for looking up the word under your cursor, put the following in the .vimrc file
 ```
 let g:use_default_key_map = 0
-nnoremap YOUR_OWN_KEY :call Thesaurus_LookCurrentWord()<CR>
+nnoremap <YOUR_OWN_KEY> :ThesaurusCurrent()<cr>
 ```
-2) By default this plugin uses python 2. To use python 3 instead, put "set pyx=3" in your .vimrc. When vim is compiled with only python 3 support, "set pyx=3" becomes compulsory.
+2) By default this plugin uses python 2. To use python 3 instead, add the following to your `.vimrc`. When vim is compiled with only python 3 support, `set pyx=3` becomes compulsory.
+
+```
+set pyx=3
+```
 
 ## FAQ
 1. If your python support test does not go through,

@@ -28,10 +28,12 @@ if !exists("g:use_default_key_map")
 
 endif
 
+command! ThesaurusCurrent :call thesaurusPy2Vim#Thesaurus_LookCurrentWord()
+command! -nargs=1 Thesaurus :call thesaurusPy2Vim#Thesaurus_LookWord(<q-args>)
+
 if (g:use_default_key_map)
 
     nnoremap <Leader>t :call thesaurusPy2Vim#Thesaurus_LookCurrentWord()<CR>
-    command! ThesaurusCurrent :call thesaurusPy2Vim#Thesaurus_LookCurrentWord()
-    command! -nargs=1 Thesaurus :call thesaurusPy2Vim#Thesaurus_LookWord(<q-args>)
 
 endif
+
